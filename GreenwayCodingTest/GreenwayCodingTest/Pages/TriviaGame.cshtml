@@ -1,0 +1,88 @@
+﻿@page "{handler?}"
+@model GreenwayCodingTest.Pages.TriviaGameModel
+@{
+}
+<div class="container">
+    <div class="row">
+        3. This is trivia Game Exercise Page
+    </div>
+    <div class="row">
+
+        <form method="get" asp-page-handler="trivia">
+            <button type="submit" class="btn btn-primary">Generate New Game</button>
+        </form>
+    </div>
+    @*<form method="post" asp-page-handler="quizsubmit" >
+            @if (Model.TriviaInfoCollection != null)
+            {
+
+                var index = 0;
+                @foreach (var trivia in @Model.TriviaInfoCollection.TriviaQueryList)
+                {
+                    { index++; }
+            <div class="row">
+                <label asp-for="@trivia.Question"></label>
+                <br />
+                <br />
+
+                <div class="container">
+                    @foreach (var option in trivia.AllOptions)
+                    {
+                        @Html.Raw($"<input type='radio' name='Option_{index}' value='{option}' /> {option}")
+                    }
+                </div>
+                <br />
+                <br />
+
+            </div>
+                }
+                <button type="submit" class="btn btn-primary">Submit Game</button>
+            }
+        </form>*@
+    <form method="post" asp-page-handler="quizsubmit">
+        @if (Model.TriviaQueries != null)
+        {
+            if (Model.TriviaQueries.Count > 0)
+            {
+                <table class="table">
+                    @for (var i = 0; i < Model.TriviaQueries.Count; i++)
+                    {
+                        <tr>
+                            <td>
+                                <input type="hidden" asp-for="@Model.TriviaQueries[@i].Question" />
+                                <input type="hidden" asp-for="@Model.TriviaQueries[@i].Type" />
+                                <input type="hidden" asp-for="@Model.TriviaQueries[@i].IncorrectAnswer" />
+                                <input type="hidden" asp-for="@Model.TriviaQueries[@i].CorrectAnswer" />
+                                <input type="hidden" asp-for="@Model.TriviaQueries[@i].Difficulty" />
+                                <input type="hidden" asp-for="@Model.TriviaQueries[@i].Category" />
+                                <label name="Question">@Html.Raw(Model.TriviaQueries[@i].Question)</label>
+                            </td>
+                            <td>
+                                <input type="hidden" asp-for="@Model.TriviaQueries[@i].AllOption" />
+                                <select class="form-control" asp-for="@Model.TriviaQueries[@i].Option"
+                                        asp-items="@Model.TriviaQueries[@i].AllOption"></select>
+                            </td>
+                        </tr>
+                    }
+                </table>
+            }
+            <button type="submit" class="btn btn-primary">Submit Game</button>
+
+        }
+
+        @if (Model.CorrectAnswers > -1)
+        {
+            <div class="jumbotron">
+                <H1 style="text-align:center">@Model.CorrectAnswers/5</H1>
+            </div>
+        }
+
+
+    </form>
+</div>
+<br />
+<br />
+<br />
+<div class="row">
+    <a class="btn btn-primary" asp-page="/Index">Back to Home</a>
+</div>

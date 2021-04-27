@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30709.132
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GreenwayCodingTest", "GreenwayCodingTest\GreenwayCodingTest.csproj", "{64AEA7DF-A2FA-49AE-8C20-E38A7CA11971}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GreenwayCoding.Utilities", "GreenwayCoding.Utilities\GreenwayCoding.Utilities.csproj", "{AF9A1C92-D77E-43E2-BCD5-EFD5F53A9A58}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GreenwayCoding.Services", "GreenwayCoding.Services\GreenwayCoding.Services.csproj", "{5507951E-1A60-41F6-8E4E-31E9FCAA6BDF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GreenwayCoding.Models", "GreenwayCoding.Models\GreenwayCoding.Models.csproj", "{5FFA7CB9-62F7-4143-B710-32E0DA62107C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreenwayCoding.Services.Test", "GreenwayCoding.Services.Test\GreenwayCoding.Services.Test.csproj", "{B8A82DBD-6EE2-44EF-A8CC-2096837590E4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{64AEA7DF-A2FA-49AE-8C20-E38A7CA11971}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64AEA7DF-A2FA-49AE-8C20-E38A7CA11971}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64AEA7DF-A2FA-49AE-8C20-E38A7CA11971}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64AEA7DF-A2FA-49AE-8C20-E38A7CA11971}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF9A1C92-D77E-43E2-BCD5-EFD5F53A9A58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF9A1C92-D77E-43E2-BCD5-EFD5F53A9A58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF9A1C92-D77E-43E2-BCD5-EFD5F53A9A58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF9A1C92-D77E-43E2-BCD5-EFD5F53A9A58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5507951E-1A60-41F6-8E4E-31E9FCAA6BDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5507951E-1A60-41F6-8E4E-31E9FCAA6BDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5507951E-1A60-41F6-8E4E-31E9FCAA6BDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5507951E-1A60-41F6-8E4E-31E9FCAA6BDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FFA7CB9-62F7-4143-B710-32E0DA62107C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FFA7CB9-62F7-4143-B710-32E0DA62107C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FFA7CB9-62F7-4143-B710-32E0DA62107C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FFA7CB9-62F7-4143-B710-32E0DA62107C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8A82DBD-6EE2-44EF-A8CC-2096837590E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8A82DBD-6EE2-44EF-A8CC-2096837590E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8A82DBD-6EE2-44EF-A8CC-2096837590E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8A82DBD-6EE2-44EF-A8CC-2096837590E4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {10522677-622D-49BD-9417-58CC10FFFF15}
+	EndGlobalSection
+EndGlobal

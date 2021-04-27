@@ -1,0 +1,42 @@
+﻿@page
+@model GreenwayCodingTest.Pages.FruitStoreModel
+@{
+}
+<div class="container">
+    <div class="row">
+        2. This is the FruitStore Billing Exercise Page
+    </div>
+    <div class="row">
+        <form method="post">
+            <input type="hidden" />
+            <div class="form-group">
+                <label></label>
+                <input class="form-control" asp-for="BillingDetailsText" />
+                <span class="text-danger" asp-for="ContentText"></span>
+            </div>
+            <button type="submit" class="btn btn-primary">Generate Bill</button>
+        </form>
+    </div>
+    @if (Model.BillingInfo != null)
+    {
+
+        if (Model.BillingInfo.HasErrors)
+        {
+            foreach (var error in Model.BillingInfo.Errors)
+            {
+                <div class="row">@error</div>
+            }
+        }
+        else
+        {
+            <div class="row">$@Model.BillingInfo.BillTotal</div>
+        }
+
+    }
+</div>
+<br />
+<br />
+<br />
+<div class="row">
+    <a class="btn btn-primary" asp-page="/Index">Back to Home</a>
+</div>

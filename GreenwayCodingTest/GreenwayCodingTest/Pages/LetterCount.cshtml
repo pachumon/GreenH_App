@@ -1,0 +1,35 @@
+﻿@page
+@model GreenwayCodingTest.Pages.LetterCountModel
+@{
+}
+<div class="container">
+    <div class="row">
+        1. This is the lettercount Exercise Page
+    </div>
+    <div class="row">
+        <form method="post">
+            <input type="hidden" />
+            <div class="form-group">
+                <label></label>
+                <input class="form-control" asp-for="ContentText" />
+                <span class="text-danger" asp-for="ContentText"></span>
+            </div>
+            <button type="submit" class="btn btn-primary">Process</button>
+        </form>
+    </div>
+    @if (Model.LetterCountCol != null)
+    {
+
+        @foreach (var letterCount in Model.LetterCountCol)
+        {
+            <div class="row">@letterCount</div>
+        }
+
+    }
+</div>
+<br />
+<br />
+<br />
+<div class="row">
+    <a class="btn btn-primary" asp-page="/Index">Back to Home</a>
+</div>
